@@ -1,0 +1,344 @@
+% This is "sig-alternate.tex" V2.0 May 2012
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+% 1) The Permission Statement
+% 2) The Conference (location) Info information
+% 3) The Copyright Line with ACM data
+% 4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate}
+
+\usepackage{url}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{bm}
+
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+\newtheorem{theorem}{Theorem} 
+\newtheorem{lemma}{Lemma}
+\newtheorem{propn}{Proposition}
+\newtheorem*{thmm}{Theorem}
+\newtheorem{remk}{Remark} 
+\newtheorem{corol}{Corollary}
+\newtheorem{definition}{Definition}
+
+
+
+\newtheorem{thm}{Theorem}[section] 
+\newtheorem{prop}[thm]{Proposition} 
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary} 
+\newtheorem{con}[thm]{Conjecture} 
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem*{rem}{Remark}
+%\newtheorem*{nota}{Notation}
+\newtheorem*{nota}{Notation}
+\newtheorem{cla}[thm]{Claim}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exs}[thm]{Examples}
+\newtheorem*{exer}{Exercise}
+\newtheorem{case}{Case}
+\newtheorem{conj}{Conjecture}
+
+\definecolor{sotonblue}{rgb}{0.0,0.394,0.597}
+
+\newcommand{\pspace}{$(\Omega_\alpha,\mathcal{F}_\alpha,P_\alpha)$ } 
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Pspace}{(\Omega, \mathcal{F},\mathbb{P})}
+\DeclareMathOperator{\Pspacen}{(\Omega_n, \mathcal{F}_n,\mathbb{P}_n)}
+
+\DeclareMathOperator{\X}{\mathcal{X}}
+\DeclareMathOperator{\Y}{\mathcal{Y}}
+\DeclareMathOperator{\A}{\mathcal{A}}
+\DeclareMathOperator{\B}{\mathcal{B}}
+\DeclareMathOperator{\F}{\mathcal{F}}
+
+\begin{document}
+%
+% --- Author Metadata here ---
+\conferenceinfo{Workshop on the theory and practice of social machines @ WWW2014}{2014, Seoul, South Korea}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01} % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Parsing Legalese with Social Machines}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{2} % in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Reuben Binns, David Matthews\\
+       \affaddr{Web Science Doctoral Training Centre}\\
+       \affaddr{University of Southampton}\\
+       \affaddr{Southampton, UK}\\
+       \email{\{rb5g11,dm1x07\}@soton.ac.uk}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+%\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+
+The web can be seen as an engine to `create abstract social machines - new forms of social processes that would be given to the world at large' \cite{timbl:weaving}. This paper concerns social machines whose purpose is to curate, analyse, and rate legal documents. A range of systems are identified and classified according to a pre-existing framework for social machines \cite{shadbolt:classif}. One such system, which we analyse in depth, is `Terms-of-Service; Didn't Read', an initiative to rate website terms and privacy policies. Attributes of the system are described and discussed in relation to features of social machines identified in previous research. Using open data generated by the system, we examine the interaction and relationships between its human contributors and  machine counterparts via both qualitative and statistical analysis. We conclude with considerations for the theory, measurement and design of social machines.
+
+\end{abstract}
+
+% A category with the (minimum) three required fields
+\category{H.1.2}{User/Machine Systems}{Human information processing}
+\category{G.2.3}{Discrete Mathematics}{Applications}
+
+\terms{Human Factors, Measurement, Design, Theory}
+
+\keywords{Social Machines; User Agreements; Terms of Service; Privacy; Legal Informatics; network science}
+
+\section{Introduction}
+
+Social machines are new combinations of human and machine activity that engage in complex activities and solve problems which were previously difficult or costly for humans and machines to do alone. They have been characterised by `(i) problems solved by very large scale human participation via the Web, (ii) access to, or the ability to generate, large amounts of relevant data using open data standards, (iii) confidence in the quality of the data and (iv) intuitive interfaces' \cite{shadbolt:classif}. Models to understand social machines have emphasised that they are underpinned by heterogeneous networks of actors, processes of translation, and phases of adaptation from one steady state to another \cite{tinati:htp}.
+
+Underlying this theoretical work is the proposition that rather than isolating machines or human users as individual units, we must consider both within the compound of a `social machine'. Some social machines have broadly defined goals (such as to curate knowledge, or to maintain social connections), while others are set up around a single, tightly-defined purpose and objective. Included amongst the latter are social machines for studying galaxies \footnote{GalaxyZoo <http://www.galaxyzoo.org>}, political campaigns \cite{ohara:politics}, health promotion \cite{kleek:health}, and crime reporting \cite{evans:crime}.
+
+One phenomena so far undocumented in this body of research is the use of social machines in the curation, analysis and rating of legal documents and advice. Contracts, terms-of-service, privacy policies, and licenses all serve important functions in a range of online and offline interactions. However, they incur significant costs on interacting parties and the wider public at large. They are often written in complex legalistic language (sometimes referred to as `legalese') which is time-consuming and difficult for individuals to understand without formal training. In addition, despite advances in automatic parsing techniques made by researchers in semantic processing and legal informatics \cite{franc:semantic, spinosa:nlp}, it seems unlikely that the curation, analysis and rating of such texts can be achieved effectively by computational processes alone.
+
+Given these problems, it is unsurprising that a number of social machines aimed at handling these tasks and functions are emerging. These systems aim to capture the activity of human actors who write, develop, read, modify, sign, or abide by such texts, and aggregate that activity to produce new content, services, or public goods. Some are tightly focused on policies and contracts, while others form part of broader services whose general aim is to digitise and democratise access to law, legal resources and the legal profession in general.
+
+\section{Classifying Social Machines}
+
+What makes something a social machine, and can any of the existing platforms for legal documents be categorised as such? In order to answer this question, we identified a range of companies and projects which apply incorporated elements of human and computational intelligence to the creation, customisation, curation and analysis of legal documents. These were discovered through web searches using a combination of keywords relating to both legal documents and social machines. Seven candidate social machines \footnote{These were: `Terms of Service; Didn't Read [http://www.tosdr.org], Docracy [http://www.docracy.com], Law Pivot / Rocket Lawyer [http://www.lawpivot.com], Jurify [http://www.jurify.com], LawQA [http://www.lawqa.com], Avvo [http://www.avvo.com], and MyRight [http://www.myright.me]} were examined in greater detail to determine the extent to which they exhibit the constructs of social machines derived from a classificatory framework developed in prior research \cite{shadbolt:classif}. This framework was developed through knowledge elicitation, using the repertory grid technique \cite{kelly:constructs}. It outlines a set of constructs in the areas of: `contributions', such as production of content or subjective appraisal; `participants and roles', which includes constructs like participant anonymity and autonomy; and `motivation', which concerns the reasons for contributors to be involved.
+
+\subsection{Legalese Social Machines}
+
+Four of these candidate social machines in particular had a significant number of features corresponding to the framework constructs (see fig. 1). These were: the `Terms of Service; Didn't Read' project, a platform for analysing and rating website terms and privacy policies; Docracy, a network comprised of openly licensed legal documents and the community who create, share and annotate them; and Jurify and Rocket Lawyer, two similar services which curate questions and answers about legal topics, in a similar fashion to other social question and answer platforms like StackOverflow and Quora.
+
+Each platform involves the creation and subjective appraisal of domain-specific content, where these activities are broadly pre-defined by the platform, and produce an overall benefit to the platform (all of which are features corresponding to the first five constructs of the framework). For instance, participants in all platforms produce content, subjectively rate that content, and in each case these ratings are aggregated by the system to create overall scores. These scores are used to bring the most useful content to the surface, or to rank documents according to the desirability of their contents. We conclude that several of the systems we looked at can be characterised as `social machines for legalese', exhibit a similar set of features corresponding to the constructs developed in previous frameworks (see appendix figure 1 for a selection and relevant constructs).
+
+\subsection{Participant roles and human-machine collaboration}
+
+Considering the roles participants play in these social machines, and the extent to which those roles are differentiated and hierarchical, raised some questions which merited in depth study. First, given their orientation towards the relatively specialised area of legal documents, it is unsurprising that these social machines attract participants with specialised knowledge. In some cases, such as Docracy and Jurify, verified legal practitioners have special status relative to other participants, and reputation can be conferred on a user when their contributions are positively rated by others. In others, such as ToS;DR, there is no formalised hierarchy of users; each participants subjective contribution is judged according to its merit rather than the authors prior rating or attributes. However, in such a system, informal heirarchies of influence or contributions may exist. This possibility is explored in the analysis in section 3.
+
+In addition, consideration of participant roles raises the question of the interaction between human and machine `actors' in these systems. In two cases (ToS;DR and Docracy), automated web crawlers interact with the human actors to enable new functions. In order to track the use of legal documents which originate from its system, Docracy crawls the web for versions of its website terms and privacy policies, and applies natural language processing to detect `forks' and `diffs'. ToS;DR implement a similar web crawler (ToSBACK) to detect changes to popular services' documents, which are then delivered to human actors to check over. The nature of this interaction between humans and automated processes is also investigated in section 3.
+
+\section{Case study: ToS;DR}
+
+In order to investigate these phenomena in more detail, we focused on ToS;DR. This platform is `open' in that both the underlying source code and the data it generates are all openly licensed and available, making it amenable to in-depth study and statistical analysis.
+
+\subsection{A system for aggregating assessments of website policies}
+The platform has around 500 users, who communicate primarily through an open mailing list (hosted by Google Groups and archived by GMane). Its stated aim is to `fix the biggest lie on the internet' - namely, the statement that `I have read and agreed to the terms'. Participants identify, discuss, and annotate clauses in terms-of-service and privacy policies, rating them as either `good', `bad', or `neutral'. This activity generates the raw data which drives the service – as they explain it, `every thread on the mailing list is a data point'. Once a sufficient number of data points have been collected for a particular service's policies, the number of good, bad and neutral points are tallied to produce an overall rating between A and E for that service.
+
+This system produces open data via an API which can be consumed in other contexts (including by other social machines). One instance of this is the range of browser plugins available based on the ToSDR data, which alert users to the ratings of websites they visit.
+
+The web crawler ToSBACK was integrated into the ToS;DR system in July 2013 to automate the process of checking website policies. Any participant can earmark a new website to be rated by adding it to ToSBACK's index of websites' privacy policies and terms-of-service (which are stored as XPath addresses). ToSBACK regularly crawls this index and notifies participants of any changes and additions to the policies which may need to be reviewed. Unlike in other social machines we surveyed, this automated `bot' is treated, according to the ontology of the service, just like any human user, i.e. a node in the mailing list which provides raw data for review.
+
+\subsection{Quantitative analysis of community structure}
+
+Our quantitative analysis uses data from the ToS;DR platform to investigate questions raised in 2.1., namely:
+\begin{enumerate}
+\item \emph{Informal heirarchies:} What is the structure of the network of human contributors?
+\item \emph{Human-computer co-operation:} How do computational and human actors interact with each other within the system?
+\item \emph{Effect of computation:} In addition, given that we had data from before and after the introduction of a new computational actor to the platform (namely, the ToSBACK bot) we were able to measure potential effects such an actor had on the dynamics of the overall system
+\end{enumerate}
+
+In order to answer these questions, we web scraped 2345 contributions from the group which were archived on GMane. Our aim was to understand the network or \emph{community structure} of the social machine, both before and after the introduction of the ToSBACK bot. In order to examine this, we used the Girvan and Newman (GN) algorithm for identifying communities in complex networks \cite{gnm:comm}.
+
+\subsubsection{Girvan and Newman Algorithm}
+
+Let $G$ be a simple weighted graph  with edge and vertex sets $E(G)$ and $V(G)$  repectively.  The importance of an individual edge $e_{ij} \in E(G)$ is commonly calculated in terms of \emph{edge betweenness centrality} which is defined as follows:
+\[\beta(e_{ij}) = \sum_{ u\neq v \neq t \in V(G)} \frac{\sigma_{st}(e_{ij})}{\sigma_{st}}\]
+where $\sigma_{st}$ is the number of shortest paths from vertex $s$ to $t$ and $\sigma_{st}(e_{ij})$ is the number of those shortest paths that pass through $e_{ij}$.  
+
+In general an edge with high edge betweeness centrality sits between two highly connected areas.  For example, the much ballyhooed \emph{weak ties} in a social network have high edge betweeness centrality.
+
+In order to determine community structure we will apply the Girvan and Newman (GN) algorithm \cite{gnm:comm} which builds a binary tree, $T$ from a simple weighted graph as follows: 
+\begin{itemize}
+\item[(i)] Set graph $G$ to be the root vertex of $T$.
+ \item[(ii)] Find the edge, $e_{ij}$, with the highest betweeness centrality in $G$.
+ \item[(iii)] Remove that edge to form  a new graph $G'$
+ \item[(iv)] If $G'$ ``splits'' the graph i.e. the number of connected components increases to two then add two children to the root vertex of $T$ (these child vertices correspond to the connected components of $G$).
+ \item[(v)] This procedure is iterated until there are no remaining edges in $E(G)$.
+\end{itemize}
+
+It has been shown \cite{gnm:comm} that branches in $T$ correspond closely with communities in $G$ and the GN algorithm has been used to identify communities in various guises \cite{guimera:comm}.
+
+\subsubsection{Method}
+
+We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive before and after the ToSBack bot began contributing. The vertex set of both graphs are made up of contributors to the mailing list. An edge was placed between two vertices if the relevant contributors responded, or were responded to by another contributor. These edges were then weighted by the number of interactions between the relevant contributors. Finally we applied the GN algorithm to both graphs.
+
+
+\subsubsection{Results}
+
+\includegraphics[width=7.5cm]{graph1}\caption[width=7]{ $G_1$, network graph corresponding to the mailing list prior to the ToSBack bot contributions, with the longest branch colored in red}
+
+For $G_1$ (pre-ToSBack) note that tree, $T$, built via the GN algorithm, splits into four branches and these branches can be recognised as the areas of discussion initiated by or frequently involving particular members.
+
+\includegraphics[width=7.5cm]{graph2}\caption{ $G_2$, network graph corresponding to the mailing list after the ToSBack bot contributions began}
+
+For $G_2$, (post-ToSBACK), the network structure is changed significantly. The tree has greater symmetry, with no one partipant accounting for a highly disproportionate number of interactions.
+
+\subsection{Discussion}
+
+We see two distinct community structures before and after the introduction of the ToSBack bot. In particular notice the asymmetry of the very long branch, which represents one particular user's tendency to interact with a disproportionate number of contributors during this period. In contrast, after the introduction of the bot, there is no longer one main information hub and the network is more balanced. The first graph resembles one connected tree where discussion went through one person, while the other is two largely separate trees, indicating two separated communities.
+
+One possible explanation for this is suggested by research into how structures naturally become optimised. Self-similarity and self-replication in natural structures like rivers ensures that these structures develop in an optimal way (for example they satisfy Murray's principle of minimum work \cite{murray:min}). Guimera \emph{et. al.} show that this principle is also true for communities; they tend to self-organise to form an optimal structure \cite{guimera:comm}.
+
+One way of measuring self-similarity in a graph is to find the order of the symmetry group or group of automorphisms of that graph. The increasing symmetry discovered in this network may therefore be an indication of self-organisation for more efficient dissemination of information. In particular, for a tree, $T$, we can formally measure how \emph{symmetric} that tree is by calculating the number of permutations of the vertices of that graph which preserves adjacent vertices. We call the set of all these permutations, $Aut(T)$, the \emph{automorphism group} of $T$ and the number of allowed permutations, $|Aut(T)|$ is the size of the automorphism group. In particular $|Aut(T_{1})| = 16$ and $|Aut(T_{2})|  = 32$ this shows a marked increase in the cardinality of the automorphism group and therefore increased symmetry.
+
+Finally, focusing in on the nodes around the ToSBack `bot' suggests that it may have introduced a different dynamic to the network. One particular user, who had previously made a great number of contributions which were largely ignored by others, began interacting heavily with the bot. In fact, this user accounted for the overwhelming majority of all interactions with the bot (86\%). During this period, the user's importance in the network grew, triggering more reponses than in the previous period (while her total contributions remained stable). A possible explanation for this is that this user found a new role after the bot arrived; she went from being a producer of content, to become a filter between the new content generated by the bot and other (human) participants.
+
+\section{Implications for theory, design and measurement}
+
+Our preliminary classification exercise identified a range of what could be termed `legal social machines'; platforms and communities who create, curate, rate, and annotate legal documents and information in ways that make them more usable by non-experts. They generally feature a relatively constrained set of roles (such as contributions and ratings) and make use of automated systems to cut down on repetitive tasks which might be boring for human participants (such as checking for changes in website policies).
+
+Reflecting on ToS;DR and other legal social machines in depth raises some interesting points of connection with previous work on the theory of social machines. First, as proposed in previous work, social machines should be regarded as `networks of networks' \cite{tinati:htp}, and similarly, as `nested' within each other at different levels of a `polyarchy' \cite{shadbolt:classif}. Our examination of Tos;DR lends weight to both perspectives; our analysis reveals distinct networks of contributors within the larger network, which is itself, in part, nested within the even larger Google Groups network.
+
+Second, ToS;DR and ToSBACK are examples of two pre-existing social machines (both of which consisted of human and machine actors), which became appropriated by each other and amalgamated into a new composite social machine (illustrating at least two distinct `phases' of development \cite{tinati:htp}). In addition, the websites that this composite social machine interacts with (through scraping, annotating and rating), are often themselves instances of social machines (i.e. Facebook or Wikipedia). This emphasises the importance of recognising the extent to which social machines interact with each other in complex ways which might otherwise be overlooked if considered individually \cite{deroure:obs}.
+
+Finally, by applying the GN algorithm to archived interactions between both human and machine actors within a social machine, this paper suggests novel techniques for measuring and analysing several aspects of social machines. This method can reveal a) the efficiency of information flow within the social machine, b) information hubs within it, and c) identify the roles of humans and bots relative to each each other within the system.
+
+Our findings may also suggest recommendations for anyone designing new social machines or attempting to shape existing ones. We found that the introduction of a new technological actor (TosBack) disrupted the overall structure of the network, with workflows changing and human participants re-positioning themselves around it. Designers should therefore be aware that the automation of certain roles can have wide-ranging effects on the overall operation of a social machine.
+
+\section{Acknowledgments}
+
+The work in this paper was funded by the Research Councils UK Digital Econony Programme, Web Science Doctoral Training Centre, University of Southampton, EP/G036926/1. The authors also thank Hugo Roy, project lead for ToS;DR for advice.
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{sociam2014_RB_DM} % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+% and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+\appendix
+
+
+\begin{table}[htp]
+    \begin{tabular}{|p{3.5cm}|p{4cm}|p{4cm}|p{4cm}|}
+    \hline
+    \textbf{Constructs}                        & \texbf{ToSDR}                                                                                                                                                                    & \textbf{Docracy}                                                                                                  & \textbf{Jurify}                                                                              \\
+    Machine owner benefits            & A distributed project run by a non-profit organisation, there is no distinction between benefits for users / machine 'owner' & Machine owner benefits by establishes its business as the platform for sharing open free legal documents & Machine owner benefits by establishes its business as the platform for legal advice \\
+    Pre-defined roles                 & Roles mostly pre-defined, but some room for participant-definition.                                                                                                      & Roles mostly pre-defined                                                                                 & Roles mostly pre-defined                                                            \\
+    Participation done via            & Web browsers                                                                                                                                                             & Web browsers                                                                                             & Web browsers                                                                        \\
+    Participant autonomy              & Constrained to an extent, messages should be of certain type and format                                                                                                 & Constrained by format and purpose                                                                        & Constrained by format and purpose                                                   \\
+    Anonymity                         & Pseudonyms permitted                                                                                                                                                     & Pseudonyms permitted but not encouraged                                                                  & Pseudonyms permitted but not encouraged                                             \\
+    Heirarchy and separation of roles & No formal heirarchy                                                                                                                                                      & Formal heirarchy of legal experts / non-experts                                                          & Formal heirarchy of legal experts / non-experts                                     \\
+    Extrinsic reward                  & No                                                                                                                                                                       & Yes, professional status and client leads                                                               & Yes, professional status and client leads                                          \\ \hline
+    \end{tabular}
+\caption{\emph{Social Machines for Legalese} -- Three of the seven social
+  machines we studied for this analysis, according to relevant constructs developed in \cite{shadbolt:classif}.} \label{table:constructs}
+\end{table}
+
+
+
+\balancecolumns % GM June 2007
+% That's all folks!
+\end{document}
