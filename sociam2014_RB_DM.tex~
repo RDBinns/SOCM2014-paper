@@ -1,0 +1,122 @@
+@BOOK{timbl:weaving,
+	AUTHOR = "T. Berners-Lee and M. Fischetti",
+	TITLE = "Weaving the web: The original design and ultimate destiny of the world wide web by its inventor",
+	PUBLISHER = "Harper Collins",
+	ADDRESS = "San Francisco"
+	YEAR = "1999"	}
+
+@INPROCEEDINGS{shadbolt:classif,
+	AUTHOR = " Shadbolt, Nigel R., Smith, Daniel Alexander, Simperl, Elena, Van Kleek, Max, Yang, Yang and Hall, Wendy",
+	TITLE = "Towards a classification framework for social machines",
+	BOOKTITLE = "SOCM2013: The Theory and Practice of Social Machines, Rio de Janeiro, Brazil",
+	VOLUME = {},
+	NUMBER = {},
+	PAGES = {},
+	MONTH = "",
+	YEAR = {2013}	}
+
+@INPROCEEDINGS{deroure:obs,
+	AUTHOR = "De Roure, D., et. al",
+	TITLE = "Observing Social Machines Part 1: What to Observe?",
+    BOOKTITLE = "SOCM2013: The Theory and Practice of Social Machines, Rio de Janeiro, Brazil",
+	VOLUME = {},
+	NUMBER = {},
+	PAGES = {},
+	MONTH = "",
+	YEAR = {2013}	}
+
+@INPROCEEDINGS{tinati:htp,
+	AUTHOR = "R. Tinati, L. Carr, S. Halford, C. Pope",
+	TITLE = "The HTP Model: Understanding the Development of Social Machines",
+	BOOKTITLE = "SOCM2013: The Theory and Practice of Social Machines, Rio de Janeiro, Brazil",
+	PAGES = "",
+	ORGANIZATION = "",
+	MONTH = "", 
+	YEAR = {2013}	}
+
+@ARTICLE{ohara:politics,
+	AUTHOR = "O'Hara, Kieron",
+	TITLE = "Social Machine Politics Are Here to Stay.",
+	JOURNAL = {Internet Computing, IEEE},
+	VOLUME = {17},
+	NUMBER = {2},
+	PAGES = {87-90},
+	MONTH = "",
+	YEAR = {2013}	}
+
+@ARTICLE{guimera:comm,
+	AUTHOR = "Guimera, Roger, et al.",
+	TITLE = "Self-similar community structure in a network of human interactions.",
+	JOURNAL = {Physical review E},
+	VOLUME = {68},
+	NUMBER = {6},
+	PAGES = {},
+	MONTH = "",
+	YEAR = {2003}	}
+	
+@ARTICLE{gnm:comm,
+	AUTHOR = "Girvan, Michelle, and Mark EJ Newman",
+	TITLE = "Community structure in social and biological networks.",
+	JOURNAL = {Proceedings of the National Academy of Sciences},
+	VOLUME = {99},
+	NUMBER = {12},
+	PAGES = {7821-7826},
+	MONTH = "",
+	YEAR = {2002}	}
+
+@INPROCEEDINGS{murray:min,
+	AUTHOR = "Murray, Cecil D.",
+	TITLE = "The physiological principle of minimum work: I. The vascular system and the cost of blood volume.",
+	BOOKTITLE = "Proceedings of the National Academy of Sciences of the United States of America",
+	PAGES = "",
+	ORGANIZATION = "",
+	MONTH = "", 
+	YEAR = {1926}	}
+
+@INPROCEEDINGS{kleek:health,
+	AUTHOR = "Max Van Kleek, Daniel A. Smith, Wendy Hall, and Nigel R. Shadbolt",
+	TITLE = "'The Crowd Keeps Me in Shape': Social Psychology and the Present and Future of Health Social Machines",
+	BOOKTITLE = "SOCM2013: The Theory and Practice of Social Machines, Rio de Janeiro, Brazil",
+	PAGES = "",
+	ORGANIZATION = "",
+	MONTH = "", 
+	YEAR = {2013}	}
+	
+@INPROCEEDINGS{evans:crime,
+	AUTHOR = "Maire Byrne Evans, Kieron O’Hara, Thanassis Tiropanis, Craig Webber",
+	TITLE = "Crime Applications and Social Machines: Crowdsourcing Sensitive Data",
+	BOOKTITLE = "SOCM2013: The Theory and Practice of Social Machines, Rio de Janeiro, Brazil",
+	PAGES = "",
+	ORGANIZATION = "",
+	MONTH = "", 
+	YEAR = {2013}	}
+
+@INPROCEEDINGS{spinosa:nlp,
+	AUTHOR = "Spinosa, PierLuigi, et al.",
+	TITLE = "NLP-based metadata extraction for legal text consolidation.",
+	BOOKTITLE = "Proceedings of the 12th International Conference on Artificial Intelligence and Law.",
+	PAGES = "",
+	ORGANIZATION = "ACM",
+	MONTH = "", 
+	YEAR = {2009}	}
+
+@BOOK{kelly:constructs,
+	AUTHOR = "G. A. Kelly",
+	TITLE = "The Psychology Of Personal Constructs",
+	PUBLISHER = "",
+	ADDRESS = "",
+	YEAR = "1955"	}
+
+@BOOK{Lamport:LaTeX,
+	AUTHOR = "Leslie Lamport",
+	TITLE = "LaTeX User's Guide and Document Reference Manual",
+	PUBLISHER = "Addison-Wesley Publishing Company",
+	ADDRESS = "Reading, Massachusetts",
+	YEAR = "1986"	}
+
+@BOOK{franc:semantic,
+	AUTHOR = "Francesconi, Enrico, et al.",
+	TITLE = "Semantic processing of legal texts: Where the language of law meets the law of language",
+	PUBLISHER = "Springer",
+	ADDRESS = "",
+	YEAR = "2010"	}
