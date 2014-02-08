@@ -247,22 +247,22 @@ In order to answer these questions, we web scraped 2345 contributions from the g
 
 \subsubsection{Girvan and Newman Algorithm}
 
-Let $G$ be a simple weighted graph  with edge and vertex sets $E(G)$ and $V(G)$  repectively.  The importance of an individual edge $e_{ij} \in E(G)$ is commonly calculated in terms of \emph{edge betweenness centrality} which is defined as follows:
+Let $G$ be a simple weighted graph  with edge and vertex sets $E(G)$ and $V(G)$  respectively.  The importance of an individual edge $e_{ij} \in E(G)$ is commonly calculated in terms of \emph{edge betweenness centrality} which is defined as follows:
 \[\beta(e_{ij}) = \sum_{ u\neq v \in V(G)} \frac{\sigma_{uv}(e_{ij})}{\sigma_{uv}}\]
 where $\sigma_{uv}$ is the number of shortest paths from vertex $u$ to $v$ and $\sigma_{uv}(e_{ij})$ is the number of those shortest paths that pass through edge $e_{ij}$.  
 
 In general an edge with high edge betweeness centrality sits between two highly connected areas.  For example, the much ballyhooed \emph{weak ties} in a social network have high edge betweeness centrality.
 
-In order to determine community structure we will apply the Girvan and Newman (GN) algorithm \cite{gnm:comm} which builds a binary tree, $T$ from a simple weighted graph as follows: 
+In order to determine community structure we will apply the Girvan and Newman (GN) algorithm \cite{gnm:comm} which associates a binary, rooted tree, $T$, with a simple weighted graph $G$ as follows: 
 \begin{itemize}
-\item[(i)] Set graph $G$ to be the root vertex of $T$.
- \item[(ii)] Find the edge, $e_{ij}$, with the highest betweeness centrality in $G$.
- \item[(iii)] Remove that edge to form  a new graph $G'$
+\item[(i)] The root of $T$ is assigned to be the whole graph $G$.
+ \item[(ii)] Determine the edge, $e_{ij}$, with the highest betweeness centrality in $G$.
+ \item[(iii)] Remove edge $e_{ij}$ from $G$ to form  a new graph $G'$
  \item[(iv)] If $G'$ ``splits'' the graph i.e. the number of connected components increases to two then add two children to the root vertex of $T$ (these child vertices correspond to the connected components of $G$).
  \item[(v)] This procedure is iterated until there are no remaining edges in $E(G)$.
 \end{itemize}
 
-It has been shown \cite{gnm:comm} that branches in $T$ correspond closely with communities in $G$ and the GN algorithm has been used to identify communities in various guises \cite{guimera:comm}.
+It has been shown \cite{gnm:comm} that the degree of cohesion in a network can be detected via the GN algorithm and it has been used to identify communities in structures as diverse as scientific collaboration networks, food webs and e-mail networks   \cite{gnm:comm,guimera:comm}.
 
 \subsubsection{Method}
 
@@ -271,7 +271,7 @@ We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive 
 
 \subsubsection{Results}
 
-%\includegraphics[width=7.5cm]{graph1}\caption[width=7]{ $G_1$, network graph corresponding to the mailing list prior to the ToSBack bot contributions, with the longest branch colored in red}
+%\includegraphics[width=7.5cm]{graph1}\caption[width=7]{ $G_1$, network graph corresponding to the mailing list prior to the ToSBack bot contributions, with the longest branch coloured in red}
 
 For $G_1$ (pre-ToSBack) note that tree, $T$, built via the GN algorithm, splits into four branches and these branches can be recognised as the areas of discussion initiated by or frequently involving particular members.
 
