@@ -271,7 +271,7 @@ We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive 
 
 \subsubsection{Results}
 
-The tree, $T_1$, built via the GN algorithm from the mailing list prior to the ToSBack bot corresponds to a nested hierarchy of communities within the ToS;DR mailing list at that time. In particular the vertex labeled 1 in Figure \ref{fig:t1} represents the entire mailing list and every interaction between contributors to that list, whereas the vertices labelled 2 and 17 represent two sub-communities that we will call C2 and C17 respectively. Since 2 is adjacent to 3 and 4 in addition to vertex 1 there also exist sub-communities of C2 that we denote C3 and C4. One can easily deduce from the GN algorithm that leaf vertices (vertices incident to exactly one edge) of $T_1$ corresponds to a single contributor to the mailing list thus C3 is a community of precisely 1 person. On the other hand C4 indicates a much larger community – (C2 without one contributor called V1).
+The tree, $T_1$, built via the GN algorithm from the mailing list \emph{prior} to the introduction of the  ToSBack bot corresponds to a nested hierarchy of communities within the ToS;DR mailing list at that time. In particular the vertex labeled 1 in Figure \ref{fig:t1} represents the entire mailing list and every interaction between contributors to that list, whereas the vertices labelled 2 and 17 represent two sub-communities that we will call C2 and C17 respectively. Since 2 is adjacent to 3 and 4 in addition to vertex 1 there also exist sub-communities of C2 that we denote C3 and C4. One can easily deduce from the GN algorithm that leaf vertices (vertices incident to exactly one edge) of $T_1$ corresponds to a single contributor to the mailing list thus C3 is a community of precisely 1 person. On the other hand C4 indicates a much larger community – (C2 without one contributor called V1).
 
 
 In general a subtree of the tree associated to a network using the GN algorithm that is “close ” to a line indicates a particularly well-connected community since most subcommunities will consist of one actor and a community of everybody else other than that actor. For example, we have highlighted four line-like subtrees in $T_1$. These subtrees can be recognised as the areas of discussion initiated by or frequently involving particular members.
@@ -281,22 +281,20 @@ a tree.  One can measure how symmetric
 a graphical tree is by calculating the number of permutations of the
 vertices (of that graph) that preserve adjacent vertices \cite{bela:mgt}. We
 call the set of such permutations $\Aut(T)$ - the automorphism group of $T$.  The number of permissible permutations is written as 
-$\lvert \Aut(T) \rvert$. In general low $\lvert \Aut(T) \rvert$ coincides with the presence of one or several long line-like subtrees.  We calculated that $\lvert \Aut(T_1)\rvert = 16$ and $\vert \Aut(T_2)\rvert = 32$.  This shows a marked
+$\lvert \Aut(T) \rvert$. In general low $\lvert \Aut(T) \rvert$ coincides with the presence of one or several long line-like subtrees.  We calculated that $\lvert \Aut(T_1)\rvert = 16$ and $\vert \Aut(T_2)\rvert = 128$.  This shows a marked
 increase in the cardinality of the automorphism group and
 therefore increased symmetry.
 
-
 \begin{figure}[H]
-\includegraphics[width=7.5cm]{graph1}\caption[width=7]{ The tree, $T_1$, built via the GN algorithm that corresponds to the mailing list prior to the ToSBack bot contributions.}\label{fig:t1}
+\includegraphics[width=7.5cm]{graph2}\caption{ The tree, $T_1$, built via the GN algorithm that corresponds to the mailing list prior to the ToSBack bot contributions.}\label{fig:t1}
 \end{figure}
 
 We conducted similar analysis for the mailing list after the ToSBack bot contributions began and found that the network structure had changed significantly. Tree $T_2$ has less line-like subtrees and greater symmetry, indicating that there is no participant accounting for a highly disproportionate number of interactions.
 
-
-
 \begin{figure}[H]
-\includegraphics[width=7.5cm]{graph2}\caption{ The tree, $T_2$, built via the GN algorithm that corresponds to the mailing list after the ToSBack bot contributions began.}\label{fig:t2}
+\includegraphics[width=7.5cm]{graph1}\caption[width=7]{ The tree, $T_2$, built via the GN algorithm that corresponds to the mailing list after the ToSBack bot contributions began. }\label{fig:t2}
 \end{figure}
+
 
 \subsection{Discussion}
 
