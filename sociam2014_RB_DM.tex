@@ -229,39 +229,36 @@ Let $G$ be a simple weighted graph with edge and vertex sets $E(G)$ and $V(G)$  
 \[\beta(e_{ij}) = \sum_{ u\neq v \in V(G)} \frac{\sigma_{uv}(e_{ij})}{\sigma_{uv}}\]
 where $\sigma_{uv}$ is the number of shortest paths from vertex $u$ to $v$ and $\sigma_{uv}(e_{ij})$ is the number of those shortest paths that pass through edge $e_{ij}$.  
 
-An edge with high betweeness centrality sits between two highly connected areas.  For example, the much ballyhooed \emph{weak ties} in a social network have high edge betweeness centrality.
-
 In order to determine community structure we will apply the Girvan and Newman (GN) algorithm \cite{gnm:comm} which associates a binary, rooted tree, $T$, with a simple weighted graph $G$ as follows: 
 \begin{itemize}
 \item[(i)] The root of $T$ is assigned to be the whole graph $G$.
- \item[(ii)] Determine the edge, $e_{ij}$, with the highest betweeness centrality in $G$.
- \item[(iii)] Remove edge $e_{ij}$ from $G$.
+ \item[(ii)] The edge, $e_{ij}$, with the highest betweeness centrality in $G$ is determined.
+ \item[(iii)] Edge $e_{ij}$ is removed from $G$.
  \item[(iv)] If step (iii) disconnects $G$ then connect two vertices to the root of $T$ (these  vertices correspond to the connected components of $G$).
- \item[(v)] Iterate until there are no remaining edges in $(G)$.
+ \item[(v)] Iterate until there are no remaining edges in $G$.
 \end{itemize}
 
 It has been shown \cite{gnm:comm} that the degree of cohesion in a network can be detected via the GN algorithm and it has been used to identify communities in structures as diverse as scientific collaboration networks, food webs and e-mail networks   \cite{gnm:comm,guimera:comm}.
 
 \subsubsection{Method}
 
-We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive before and after the ToSBack bot began contributing. The vertex set of both graphs are made up of contributors to the mailing list. An edge was placed between two vertices if the relevant contributors responded, or were responded to by another contributor. These edges were then weighted by the number of interactions between the relevant contributors. Finally we applied the GN algorithm to both graphs.
+We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive before and after the ToSBack bot began contributing. The vertex sets of both graphs are made up of contributors to the mailing list. An edge was placed between two vertices if the relevant contributors responded, or were responded to by another contributor. These edges were then weighted by the number of interactions between the relevant contributors. Finally we applied the GN algorithm to both graphs.
 
 
 \subsubsection{Results}
 
-The tree, $T_1$, shown in Figure \ref{fig:t1} was built via the GN algorithm from the mailing list \emph{prior} to the introduction of the  ToSBack bot corresponds to a nested hierarchy of communities within the ToS;DR mailing list at that time. In particular the vertex labeled 1 in Figure \ref{fig:t1} represents the entire mailing list and every interaction between contributors to that list, whereas the vertices labelled 2 and 17 represent two sub-communities that we will call C2 and C17 respectively. Since 2 is adjacent to 3 and 4 in addition to vertex 1 there also exist sub-communities of C2 that we denote C3 and C4. One can easily deduce from the GN algorithm that leaf vertices (vertices incident to exactly one edge) of $T_1$ corresponds to a single contributor to the mailing list thus C3 is a community of precisely 1 person. On the other hand C4 indicates a much larger community – (C2 without one contributor called V1).
+The tree, $T_1$, shown in Figure \ref{fig:t1} was built via the GN algorithm from the mailing list \emph{prior} to the introduction of the  ToSBack bot corresponds to a nested hierarchy of communities within the ToS;DR mailing list at that time. In particular the vertex labeled 1 represents the entire mailing list and every interaction between contributors, whereas the vertices 2 and 17 represent two sub-communities that we will call C2 and C17 respectively. Since, in addition to vertex 1, 2 is adjacent to 3 and 4 there also exist sub-communities of C2 that we denote C3 and C4. One can easily deduce from the GN algorithm that leaf vertices (vertices incident to exactly one edge) of $T_1$ correspond to a single contributor, thus C3 is a community of precisely 1 person. On the other hand C4 indicates a much larger community – (C2 without one contributor).
 
 
-In general a subtree of the tree associated to a network using the GN algorithm that is “close ” to a line indicates a ``hub and spoke'' community since most subcommunities will consist of one actor and a community of everybody else other than that actor. We have highlighted four line-like subtrees in $T_1$; these subtrees can be recognised as the areas of discussion initiated by or frequently involving particular members.
+In general a subtree of the tree associated to a network using the GN algorithm that is “close ” to a line indicates a hub and spoke community. We have highlighted four line-like subtrees in $T_1$; these subtrees can be recognised as the areas of discussion initiated by or frequently involving particular members.
 
 We can formalise the notion of “line-like” subtrees by analysing the \emph{symmetry} of  
 a tree.  One can measure how symmetric
-a graphical tree is by calculating the number of permutations of the
+a tree is by calculating the number of permutations, $\lvert \Aut(T) \rvert$, of the
 vertices (of that graph) that preserve adjacent vertices \cite{bela:mgt}. We
-call the set of such permutations $\Aut(T)$ - the automorphism group of $T$.  The number of permissible permutations is written as 
-$\lvert \Aut(T) \rvert$. In general low $\lvert \Aut(T) \rvert$ coincides with the presence of one or several long line-like subtrees.  We calculated that $\lvert \Aut(T_1)\rvert = 16$ and $\vert \Aut(T_2)\rvert = 24$.  This shows a marked
+call the set of such permutations the automorphism group of $T$. In general a low $\lvert \Aut(T) \rvert$ coincides with the presence of one or several long line-like subtrees.  We calculated that $\lvert \Aut(T_1)\rvert = 16$ and $\vert \Aut(T_2)\rvert = 24$.  This shows a marked
 increase in the cardinality of the automorphism group and
-therefore increased symmetry which is further entrenched by normalisation.
+therefore increased symmetry which is further entrenched by normalisation of $\Aut(T)$.
 
 \begin{figure}[H]
 \includegraphics[width=7.5cm, height  = 5cm]{t15.pdf}\caption{ The tree, $T_1$, built via the GN algorithm that corresponds to the mailing list prior to the ToSBack bot contributions.}\label{fig:t1}
