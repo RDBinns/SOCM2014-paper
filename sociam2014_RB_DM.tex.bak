@@ -208,9 +208,15 @@ We used an existing classificatory framework for social machines to search for a
 
 \section{Case study: ToS;DR}
 
-The ToS;DR platform has around 500 users, who communicate primarily through an open mailing list. Its stated aim is to `fix the biggest lie on the internet' - namely, the statement that `I have read and agreed to the terms'. Participants identify, discuss, and annotate clauses in terms-of-service and privacy policies, rating them as either `good', `bad', or `neutral'. This activity generates the raw data which drives the service – as they explain it, `every thread on the mailing list is a data point'. The number of good, bad and neutral points are tallied to produce an overall rating of a policy. The ratings serve data via an API to other services including a browser plugin.
+In order to investigate these phenomena in more detail, we focused on ToS;DR. This platform is `open' in that both the underlying source code and the data it generates are all openly licensed and available, making it amenable to in-depth study and statistical analysis.
 
-In order to keep track of changing policies, an automated web crawler called ToSBACK regularly crawls an index of websites and notifies participants of any changes to the policies which may need to be reviewed. Any participant can add a website to the index, which is a list of XPath addresses. Unlike some other social machines we surveyed, this automated `bot' is treated, according to the ontology of the service, just like any human user, i.e. a node in the mailing list which provides raw data for review.
+The platform has around 500 users, who communicate primarily through an open mailing list (hosted by Google Groups and archived by GMane). Its stated aim is to `fix the biggest lie on the internet' - namely, the statement that `I have read and agreed to the terms'. Participants identify, discuss, and annotate clauses in terms-of-service and privacy policies, rating them as either `good', `bad', or `neutral'. This activity generates the raw data which drives the service – as they explain it, `every thread on the mailing list is a data point'. Once a sufficient number of data points have been collected for a particular service's policies, the number of good, bad and neutral points are tallied to produce an overall rating between A and E for that service.
+
+This system produces open data via an API which can be consumed in other contexts (including by other social machines). One instance of this is the range of browser plugins available based on the ToSDR data, which alert users to the ratings of websites they visit.
+
+automated web crawlers interact with the human actors to enable new functions. ToS;DR implement a similar web crawler (ToSBACK) to detect changes to popular services' documents, which are then delivered to human actors to check over.
+
+The web crawler ToSBACK was integrated into the ToS;DR system in July 2013 to automate the process of checking website policies. Any participant can earmark a new website to be rated by adding it to ToSBACK's index of websites' privacy policies and terms-of-service (which are stored as XPath addresses). ToSBACK regularly crawls this index and notifies participants of any changes and additions to the policies which may need to be reviewed. Unlike in other social machines we surveyed, this automated `bot' is treated, according to the ontology of the service, just like any human user, i.e. a node in the mailing list which provides raw data for review.
 
 \subsection{Quantitative analysis of community structure}
 
@@ -221,7 +227,7 @@ Our quantitative analysis uses data from the ToS;DR platform to investigate ques
 \item \emph{Effect of computation:} In addition, given that we had data from before and after the introduction of a new computational actor to the platform (namely, the ToSBACK bot) we were able to measure potential effects such an actor had on the dynamics of the overall system
 \end{enumerate}
 
-In order to answer these questions, we web scraped 2345 contributions from the group. Our aim was to understand the network or \emph{community structure} of the social machine, both before and after the introduction of the ToSBACK bot. In order to examine this, we used the Girvan and Newman (GN) algorithm for identifying communities in complex networks \cite{gnm:comm}.
+In order to answer these questions, we web scraped 2345 contributions from the group which were archived on GMane. Our aim was to understand the network or \emph{community structure} of the social machine, both before and after the introduction of the ToSBACK bot. In order to examine this, we used the Girvan and Newman (GN) algorithm for identifying communities in complex networks \cite{gnm:comm}.
 
 \subsubsection{Girvan and Newman Algorithm}
 
@@ -252,7 +258,7 @@ We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive 
 The tree, $T_1$, built via the GN algorithm from the mailing list \emph{prior} to the introduction of the  ToSBack bot corresponds to a nested hierarchy of communities within the ToS;DR mailing list at that time. In particular the vertex labeled 1 in Figure \ref{fig:t1} represents the entire mailing list and every interaction between contributors to that list, whereas the vertices labelled 2 and 17 represent two sub-communities that we will call C2 and C17 respectively. Since 2 is adjacent to 3 and 4 in addition to vertex 1 there also exist sub-communities of C2 that we denote C3 and C4. One can easily deduce from the GN algorithm that leaf vertices (vertices incident to exactly one edge) of $T_1$ corresponds to a single contributor to the mailing list thus C3 is a community of precisely 1 person. On the other hand C4 indicates a much larger community – (C2 without one contributor called V1).
 
 
-In general a subtree of the tree associated to a network using the GN algorithm that is “close ” to a line indicates a ``hub and spoke'' community since most subcommunities will consist of one actor and a community of everybody else other than that actor. For example, we have highlighted four line-like subtrees in $T_1$ which indicates. These subtrees can be recognised as the areas of discussion initiated by or frequently involving particular members.
+In general a subtree of the tree associated to a network using the GN algorithm that is “close ” to a line indicates a particularly well-connected community since most subcommunities will consist of one actor and a community of everybody else other than that actor. For example, we have highlighted four line-like subtrees in $T_1$. These subtrees can be recognised as the areas of discussion initiated by or frequently involving particular members.
 
 We can formalise the notion of “line-like” subtrees by analysing the \emph{symmetry} of  
 a tree.  One can measure how symmetric
