@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.13)  10 FEB 2014 20:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.13)  10 FEB 2014 21:57
 entering extended mode
  %&-line parsing enabled.
 **sociam2014_RB_DM.tex
@@ -944,21 +944,42 @@ LaTeX Info: Redefining \bm on input line 204.
 \c@case=\count143
 \c@conj=\count144
 
+! Missing number, treated as zero.
+<to be read again> 
+                   \def 
+l.116 \begin{document}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \def 
+l.116 \begin{document}
+                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
 (./sociam2014_RB_DM.aux)
 \openout1 = `sociam2014_RB_DM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1008,27 +1029,27 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
-LaTeX Font Info:    Try loading font information for U+msa on input line 184.
+LaTeX Font Info:    Try loading font information for U+msa on input line 185.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 184.
+LaTeX Font Info:    Try loading font information for U+msb on input line 185.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 184.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 185.
 
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 184.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 184.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 184.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 185.
 Missing character: There is no R in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -1158,7 +1179,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184 \maketitle
+l.185 \maketitle
                 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -1633,10 +1654,6 @@ Missing character: There is no R in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no T in font nullfont!
-
-LaTeX Warning: Citation `timbl:weaving' on page \thepage  undefined on input li
-ne 187.
-
 Missing character: There is no C in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -1704,57 +1721,21 @@ Missing character: There is no O in font nullfont!
 Missing character: There is no N in font nullfont!
 
 LaTeX Warning: Citation `shadbolt:classif' on page \thepage  undefined on input
- line 201.
-
-
-LaTeX Warning: Citation `ohara:politics' on page \thepage  undefined on input l
-ine 201.
-
-
-LaTeX Warning: Citation `kleek:health' on page \thepage  undefined on input lin
-e 201.
-
-
-LaTeX Warning: Citation `evans:crime' on page \thepage  undefined on input line
- 201.
+ line 202.
 
 
 LaTeX Warning: Citation `franc:semantic' on page \thepage  undefined on input l
-ine 203.
+ine 202.
 
 
 LaTeX Warning: Citation `spinosa:nlp' on page \thepage  undefined on input line
- 203.
+ 202.
 
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no E in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no E in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no E in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no O in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no I in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no L in font nullfont!
-Missing character: There is no M in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no I in font nullfont!
-Missing character: There is no N in font nullfont!
-Missing character: There is no E in font nullfont!
-Missing character: There is no S in font nullfont!
 
 LaTeX Warning: Citation `shadbolt:classif' on page \thepage  undefined on input
- line 207.
+ line 204.
 
-Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no A in font nullfont!
@@ -1774,79 +1755,33 @@ Missing character: There is no D in font nullfont!
 Missing character: There is no R in font nullfont!
 
 LaTeX Warning: Citation `gnm:comm' on page \thepage  undefined on input line 21
-5.
+2.
 
 
-Overfull \hbox (1.02403pt too wide) in paragraph at lines 215--216
+Overfull \hbox (1.02403pt too wide) in paragraph at lines 212--213
 []\T1/aer/m/n/9 The ToS;DR plat-form pro-vides a case study of how legalese
  []
 
-[1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
-Missing character: There is no G in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no N in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no m in font nullfont!
-
-
-LaTeX Warning: Citation `gnm:comm' on page \thepage  undefined on input line 22
-3.
-
-
-LaTeX Warning: Citation `gnm:comm' on page \thepage  undefined on input line 23
-2.
-
-
-LaTeX Warning: Citation `gnm:comm' on page \thepage  undefined on input line 23
-2.
-
-
-LaTeX Warning: Citation `guimera:comm' on page \thepage  undefined on input lin
-e 232.
-
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 2 in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
-Missing character: There is no 3 in font nullfont!
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -1855,22 +1790,23 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 
-LaTeX Warning: Citation `bela:mgt' on page \thepage  undefined on input line 24
-7.
-
-
-Overfull \hbox (15.17213pt too wide) in paragraph at lines 244--251
-[]\T1/aer/m/n/9 We can for-malise the no-tion of ^^Pline-like^^Q sub-trees by a
-nalysing
- []
-
-
 
 pdfTeX warning: pdflatex (file ./t15.pdf): PDF inclusion: found PDF version <1.
 5>, but at most version <1.4> allowed
 <t15.pdf, id=12, 484.19572pt x 470.57172pt>
 File: t15.pdf Graphic file (type pdf)
  <use t15.pdf>
+
+LaTeX Warning: Citation `bela:mgt' on page \thepage  undefined on input line 23
+0.
+
+
+Overfull \hbox (15.17213pt too wide) in paragraph at lines 227--234
+[]\T1/aer/m/n/9 We can for-malise the no-tion of ^^Pline-like^^Q sub-trees by a
+nalysing
+ []
+
+
 
 pdfTeX warning: pdflatex (file ./t26.pdf): PDF inclusion: found PDF version <1.
 5>, but at most version <1.4> allowed
@@ -1879,8 +1815,7 @@ File: t26.pdf Graphic file (type pdf)
  <use t26.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./t15.pdf>]
-Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no D in font nullfont!
@@ -1896,13 +1831,13 @@ Missing character: There is no n in font nullfont!
 
 
 LaTeX Warning: Citation `murray:min' on page \thepage  undefined on input line 
-267.
+244.
 
 
 LaTeX Warning: Citation `guimera:comm' on page \thepage  undefined on input lin
-e 267.
+e 244.
 
-Missing character: There is no 4 in font nullfont!
+Missing character: There is no 3 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no M in font nullfont!
@@ -1946,7 +1881,7 @@ Missing character: There is no M in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no T in font nullfont!
-Missing character: There is no 5 in font nullfont!
+Missing character: There is no 4 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no C in font nullfont!
@@ -1963,33 +1898,110 @@ Missing character: There is no E in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no S in font nullfont!
-
-Overfull \hbox (4.13513pt too wide) in paragraph at lines 285--286
-\T1/aer/m/n/9 Train-ing Cen-tre, Uni-ver-sity of Southamp-ton, EP/G036926/1.
- []
-
 No file sociam2014_RB_DM.bbl.
+
+! LaTeX Error: Environment appendices undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.277 \begin{appendices}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no X in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no m in font nullfont!
+
+Underfull \vbox (badness 2173) has occurred while \output is active []
+
+ [2 <./t15.pdf> <./t26.pdf>]
+
+LaTeX Warning: Citation `gnm:comm' on page \thepage  undefined on input line 28
+5.
+
+
+LaTeX Warning: Citation `gnm:comm' on page \thepage  undefined on input line 29
+4.
+
+
+LaTeX Warning: Citation `gnm:comm' on page \thepage  undefined on input line 29
+4.
+
+
+LaTeX Warning: Citation `guimera:comm' on page \thepage  undefined on input lin
+e 294.
+
+
+! LaTeX Error: \begin{document} ended by \end{appendices}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 \end{appendices}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 [3
 
- <./t26.pdf>] (./sociam2014_RB_DM.aux) ) 
+] (./sociam2014_RB_DM.aux) ) 
 Here is how much of TeX's memory you used:
- 12188 strings out of 495061
- 214163 string characters out of 1182621
- 267389 words of memory out of 3000000
- 15087 multiletter control sequences out of 15000+50000
- 20091 words of font info for 55 fonts, out of 3000000 for 9000
+ 12182 strings out of 495061
+ 214102 string characters out of 1182621
+ 266389 words of memory out of 3000000
+ 15084 multiletter control sequences out of 15000+50000
+ 17938 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 56i,11n,55p,1011b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/p
-ublic/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cmextra/cmex9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi9.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmti9.pfb>
-Output written on sociam2014_RB_DM.pdf (3 pages, 132628 bytes).
+ 56i,11n,55p,1235b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/c
+mex9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pf
+b>
+Output written on sociam2014_RB_DM.pdf (3 pages, 130725 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
