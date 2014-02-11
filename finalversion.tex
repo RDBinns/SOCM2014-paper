@@ -121,7 +121,7 @@
 %\crdata{0-12345-67-8/90/01} % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Parsing Legalese with Social Machines}
+\title{Community structure for efficient information flow in 'ToS;DR', a social machine for parsing legalese}
 %
 % You need the command \numberofauthors to handle the 'placement
 % and alignment' of the authors beneath the title.
@@ -185,7 +185,7 @@ Reuben Binns, David Matthews\\
 \maketitle
 \begin{abstract}
 
-This paper presents a case study of `Terms-of-Service; Didn't Read', a social machine to curate, analyse, and rate website terms and privacy policies. We examine the relationships between its human contributors and machine counterparts to determine community structure and information flow.
+This paper presents a case study of `Terms-of-Service; Didn't Read', a social machine to curate, parse, and rate website terms and privacy policies. We examine the relationships between its human contributors and machine counterparts to determine community structure and information flow.
 
 \end{abstract}
 
@@ -211,16 +211,11 @@ In order to keep track of changing policies, an automated web crawler called ToS
 
 The ToS;DR platform provides a case study of how legalese text can be parsed through a social machine. The system receives an input of 'raw legalese', analyses its parts in terms of 'good' and 'bad', and outputs an overall score. An interesting aspect of this process is the community structure and the way information flows within it. In order to explore this we used the Girvan and Newman (GN) algorithm for identifying communities in complex networks \cite{gnm:comm}. We ran the same analysis on the data before and after the introduction of the ToSBACK crawler, in order to test how the introduction of a computational actor affected community structure.
 
-\subsubsection{Method}
+\subsection{Method}
 
-We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive before and after the ToSBack bot began contributing. The vertex sets of both graphs are made up of contributors to the mailing list. In total, 2,345 contributions were analysed, from an active user base of between 28-35. An edge was placed between two vertices if the relevant contributors responded, or were responded to by another contributor. These edges were then weighted by the number of interactions between the relevant contributors. Finally we applied the GN algorithm to both graphs.
-
-\subsubsection{Results}
-\begin{figure}[H]
-\includegraphics[width=7.5cm, height  = 5cm]{t15.pdf}\caption{ The tree, $T_1$, built via the GN algorithm that corresponds to the mailing list prior to the ToSBack bot contributions.}\label{fig:t1}
-\end{figure}
-
-Tree $T_1$ (Figure \ref{fig:t1} was built via the GN algorithm from the mailing list \emph{prior} to the introduction of the ToSBack bot, corresponds to a nested hierarchy of communities. The vertex labeled 1 represents the entire mailing list and every interaction between contributors, whereas the vertices 2 and 17 represent sub-communities that we will call $C2$ and $C17$ respectively. Since 2 is adjacent to 3 and 4 there also exist sub-communities of $C2$ that we denote $C3$ and $C4$. One can deduce from the GN algorithm that leaf vertices of $T_1$ correspond to a single contributor, thus $C3$ is a community of precisely 1 person. On the other hand $C4$ indicates a much larger community – ($C2$ without one contributor).
+We built two graphs $G_{1}$ and $G_2$ corresponding to the mailing list archive before and after the ToSBack bot began contributing. The vertex sets of both graphs are made up of contributors to the mailing list. In total, 2,345 contributions were analysed, from an active user base of between 28-35. An edge was placed between two vertices if the relevant contributors responded, or were responded to by another contributor. These edges were then weighted by the number of interactions between the relevant contributors. Finally we applied the GN algorithm to both graphs. GN detects bottlenecks in the graph of social interactions and splits the graph along these bottlenecks into  a nested hierarchy of communities .
+\subsection{Results}
+Tree $T_1$ (Figure \ref{fig:t1}) was built via the GN algorithm from the mailing list \emph{prior} to the introduction of the ToSBack bot, and corresponds to a nested hierarchy of communities. The vertex labelled 1 represents the entire mailing list and every interaction between contributors, whereas the vertices 2 and 17 represent sub-communities that we will call $C2$ and $C17$ respectively. Since 2 is adjacent to 3 and 4 there also exist sub-communities of $C2$ that we denote $C3$ and $C4$. One can deduce from the GN algorithm that leaf vertices of $T_1$ correspond to a single contributor, thus $C3$ is a community of precisely 1 person. On the other hand $C4$ indicates a much larger community – ($C2$ without one contributor).
 
 In general a subtree of the tree associated to a network using the GN algorithm that is “close ” to a line indicates a hub and spoke community. We have highlighted four line-like subtrees in $T_1$; these subtrees can be recognised as the areas of discussion initiated by or frequently involving particular members.
 
@@ -231,34 +226,34 @@ vertices (of that graph) that preserve adjacent vertices \cite{bela:mgt}. We
 call the set of such permutations the automorphism group of $T$. In general a low $\lvert \Aut(T) \rvert$ coincides with the presence of one or several long line-like subtrees.  We calculated that $\lvert \Aut(T_1)\rvert = 16$ and $\vert \Aut(T_2)\rvert = 24$.  This shows a marked
 increase in the cardinality of the automorphism group and
 therefore increased symmetry which is further entrenched by normalisation of $\Aut(T)$.
-
+\begin{figure}[H]
+\includegraphics[width=7.5cm, height  = 5cm]{t15.pdf}\caption{ The tree, $T_1$, built via the GN algorithm that corresponds to the mailing list prior to the ToSBack bot contributions.}\label{fig:t1}
+\end{figure}
 \begin{figure}[H]
 \includegraphics[width=7.5cm, height=3.5cm]{t26.pdf}\caption[width=7]{ The tree, $T_2$, built via the GN algorithm that corresponds to the mailing list after the ToSBack bot contributions began.  Vertex 17 [green] indicates the bot. }\label{fig:t2}
 \end{figure}
 
-
 \subsection{Discussion}
-
 We see two distinct community structures before and after the introduction of the ToSBack bot. Notice the asymmetry of the very long branch (red in $T_1$), which represents one particular user's tendency to interact with a disproportionate number of contributors. In contrast, after the introduction of the bot, the network is more balanced with no one information hub. %The first graph consists of one connected tree while the other is two largely separate trees, indicating two separated communities.
 
 One explanation for this is suggested by research into how structures naturally become optimised. Self-similarity in natural structures like rivers ensures that these structures develop in an optimal way \cite{murray:min}. Guimera \emph{et. al.} show that this principle is also true for communities; they tend to self-organise to form an optimal structure \cite{guimera:comm}.
 
 One way of measuring self-similarity in a graph is to find the order of the symmetry group or group of automorphisms of that graph. The increasing symmetry in $T_2$ may therefore be an indication of self-organisation for more efficient dissemination of information.
 
-Finally, one particular user began interacting heavily with the bot accounting for the overwhelming majority of interactions with the bot (86\%). During this period, the user's importance in the network grew, triggering more reponses than in the previous period (while her total contributions remained stable). A possible explanation for this is that this user found a new role after the bot arrived; she went from being a producer of content, to become a filter between the new content generated by the bot and other (human) participants.
+Finally, one particular user began interacting heavily with the bot accounting for the overwhelming majority of interactions with the bot (86\%). During this period, the user's importance in the network grew, triggering more reponses than in the previous period (while her total contributions remained stable). A possible explanation for this is that this user became a filter between the new content generated by the bot and other (human) participants.
 
-\section{Implications for theory, design and measurement}
+\section{Conclusion}
 
 %Reflecting on ToS;DR in depth raises some interesting points of connection with previous work on the theory of social machines. First, as proposed in previous work, social machines should be regarded as `networks of networks' \cite{tinati:htp}, and similarly, as `nested' within each other at different levels of a `polyarchy' \cite{shadbolt:classif}. Our examination of Tos;DR lends weight to both perspectives; our analysis reveals distinct networks of contributors within the larger network, which is itself, in part, nested within the even larger Google Groups network.
 
 %Second, ToS;DR and ToSBACK are examples of two pre-existing social machines (both of which consisted of human and machine actors), which became appropriated by each other and amalgamated into a new composite social machine (illustrating at least two distinct `phases' of development \cite{tinati:htp}). In addition, the websites that this composite social machine interacts with (through scraping, annotating and rating), are often themselves instances of social machines (i.e. Facebook or Wikipedia). This emphasises the importance of recognising the extent to which social machines interact with each other in complex ways which might otherwise be overlooked if considered individually \cite{deroure:obs}.
 
-By applying the GN algorithm to archived interactions between both human and machine actors within a social machine, this paper suggests novel techniques for measuring and analysing several aspects of social machines. This method can reveal  how the introduction of a computational actor affects community structure in a social machine. more balanced trees have better more efficient method of disseminating information, spokes and more integrated. looks as if it has made the org more efficient.
+This paper introduces a novel technique for analysing community structure within social machines using the GN algorithm. Our analysis suggests that the introduction of a computational actor increased the symmetry of the community structure, with workflows changing and humans re-positioning themselves around it. Such symmetry has been proven to improve a system's information-processing efficiency. For the ToS;DR social machine, where the translation of legalese into a human-friendly format is costly in terms of information processing, efficient information flow is important to success. We therefore believe this method may also be usefully applied to the study of other social machines where efficiency of information flow is important.
 
 %Our findings may also suggest recommendations for anyone designing new social machines or attempting to shape existing ones. We found that the introduction of a new technological actor (TosBack) disrupted the overall structure of the network, with workflows changing and human participants re-positioning themselves around it. Designers should therefore be aware that the automation of certain roles can have wide-ranging effects on the overall operation of a social machine.
 
 \section{Acknowledgments}
-Research Councils UK Digital Economy Programme, Web Science DTC, Uni. Southampton, EP/G036926/1. Hugo Roy ToS;DR project lead.
+RCUK Digital Economy Programme, Web Science DTC, Uni. Southampton, EP/G036926/1. Hugo Roy ToS;DR.
 
 %
 % The following two commands are all you need in the
